@@ -9,14 +9,14 @@ export default function ProfileImage() {
       {/* Decorative glow */}
       <div className="absolute inset-0 bg-blue-500 rounded-full opacity-20 blur-3xl scale-110" />
       {/* Decorative ring */}
-      <div className="absolute -inset-2 rounded-full border-2 border-blue-200 border-dashed animate-spin [animation-duration:20s]" />
+      <div className="absolute -inset-2 rounded-full border-2 border-blue-200 dark:border-blue-800 border-dashed animate-spin [animation-duration:20s]" />
 
       {!error ? (
         <img
           src="/images/profile.png"
           alt="Swarat Sarkar"
           onError={() => setError(true)}
-          className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-cover rounded-full border-4 border-white shadow-2xl"
+          className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-2xl"
         />
       ) : (
         /* Placeholder shown when image is missing */

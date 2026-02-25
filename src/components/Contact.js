@@ -1,9 +1,19 @@
+'use client'
+import { useState } from 'react'
 import FadeIn from './FadeIn'
-import { Mail, Linkedin, Github, ArrowRight } from 'lucide-react'
+import { Mail, Linkedin, Github, ArrowRight, Copy, Check } from 'lucide-react'
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false)
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('swaratsarkar@gmail.com')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
-    <section id="contact" className="bg-gray-900 py-20 text-white">
+    <section id="contact" className="bg-gray-900 dark:bg-gray-950 py-20 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="max-w-2xl mx-auto text-center">
@@ -24,13 +34,27 @@ export default function Contact() {
 
             {/* Contact buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a
-                href="mailto:swaratsarkar@gmail.com"
-                className="inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-900/30"
-              >
-                <Mail size={18} />
-                swaratsarkar@gmail.com
-              </a>
+              <div className="inline-flex rounded-xl overflow-hidden shadow-lg shadow-blue-900/30">
+                <button
+                  onClick={copyEmail}
+                  className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3.5 transition-all hover:-translate-y-0.5"
+                >
+                  <Mail size={18} />
+                  swaratsarkar@gmail.com
+                  {copied ? (
+                    <Check size={15} className="text-green-300" />
+                  ) : (
+                    <Copy size={14} className="opacity-60" />
+                  )}
+                </button>
+                <a
+                  href="mailto:swaratsarkar@gmail.com"
+                  className="flex items-center px-3 bg-blue-700 hover:bg-blue-600 text-white border-l border-blue-500 transition-colors hover:-translate-y-0.5"
+                  title="Open in mail client"
+                >
+                  <ArrowRight size={15} />
+                </a>
+              </div>
               <a
                 href="https://www.linkedin.com/in/swarat17"
                 target="_blank"
