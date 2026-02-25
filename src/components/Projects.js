@@ -40,8 +40,8 @@ const projects = [
     subtitle: 'RAG · NLP · LLM',
     description:
       'RAG-based competitor analysis assistant with semantic search, multi-language translation, and an RLHF feedback loop for prioritizing high-value business insights.',
-    metric: '90% semantic retrieval relevance · Self-updating knowledge base',
-    tech: ['Elasticsearch', 'Sentence-BERT', 'FastAPI', 'LangChain', 'Gemini API'],
+    metric: '6-node LangGraph pipeline · 400+ articles indexed with 30-day lookback · semantic Q&A with cited sources',
+    tech: ['Supabase pgvector', 'Sentence-BERT', 'FastAPI', 'LangChain', 'LangGraph', 'Gemini API', 'Streamlit'],
     github: 'https://github.com/swarat17/BI-Assistant',
     accent: 'from-purple-500 to-violet-600',
     accentLight: 'bg-purple-50 text-purple-700',

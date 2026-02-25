@@ -12,7 +12,7 @@ const interests = [
   {
     icon: '🎮',
     title: 'Video Games',
-    desc: 'JRPGs, open-world exploration, story-driven games. Fascinated by the craft of game world-building.',
+    desc: 'Valorant, CS2, FIFA. Competitive games, quick decision-making, and the thrill of ranked play.',
     bg: 'bg-violet-50',
     border: 'border-violet-100',
     iconBg: 'bg-violet-100',
@@ -51,9 +51,9 @@ export default function BeyondCode() {
             <div className="mt-3 w-12 h-1 bg-blue-600 rounded-full mx-auto" />
             <p className="mt-6 text-gray-500 max-w-2xl mx-auto leading-relaxed">
               When I&apos;m not building AI systems, you&apos;ll find me lost in a Studio Ghibli film,
-              deep in a JRPG, or watching football. I believe great storytelling —
-              whether in anime, games, or sports — shares something with great engineering:
-              it&apos;s all about crafting experiences that feel alive.
+              grinding ranked in Valorant, or watching football. I believe great craft —
+              whether in anime, competitive games, or sports — shares something with great engineering:
+              it&apos;s all about precision, teamwork, and experiences that feel alive.
             </p>
           </div>
         </FadeIn>
