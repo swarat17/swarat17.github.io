@@ -55,6 +55,18 @@ const projects = [
     accentLight: 'bg-purple-50 text-purple-700 dark:bg-purple-950/50 dark:text-purple-300',
   },
   {
+    title: 'Research Synthesis & Hypothesis Agent',
+    subtitle: 'Multi-Agent · LLM · Research AI',
+    filter: 'NLP & LLMs',
+    description:
+      'Autonomous 7-node multi-agent pipeline that fetches papers from ArXiv, synthesizes findings across sources, detects contradictions with severity ratings, and generates novel research hypotheses — with real-time cost tracking and configurable spending caps.',
+    metric: '~$0.035/query for 10 papers · 400–600 word synthesis + 3 scored hypotheses · serverless AWS Lambda deployment',
+    tech: ['GPT-4o-mini', 'Claude Sonnet', 'LangGraph', 'Pinecone', 'FastAPI', 'Streamlit', 'AWS Lambda', 'Supabase'],
+    github: 'https://github.com/swarat17/research-synthesis-agent',
+    accent: 'from-sky-500 to-teal-600',
+    accentLight: 'bg-sky-50 text-sky-700 dark:bg-sky-950/50 dark:text-sky-300',
+  },
+  {
     title: 'AI-Powered Policy Simulator',
     subtitle: 'Simulation · Generative AI · Full-Stack',
     filter: 'Full-Stack',

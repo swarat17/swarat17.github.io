@@ -143,7 +143,7 @@ export default function Experience() {
                         >
                           {exp.type}
                         </span>
-                        <span className="text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-600 px-2.5 py-1 rounded-full border border-gray-100 dark:border-gray-500">
+                        <span className="text-xs text-gray-400 dark:text-gray-300 bg-gray-50 dark:bg-gray-600 px-2.5 py-1 rounded-full border border-gray-100 dark:border-gray-500">
                           {exp.period}
                         </span>
                       </div>
@@ -180,7 +180,7 @@ export default function Experience() {
                 >
                   <p className="font-bold text-gray-900 dark:text-white text-sm">{edu.degree}</p>
                   <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm mt-0.5">{edu.school}</p>
-                  <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">{edu.period}</p>
+                  <p className="text-gray-400 dark:text-gray-300 text-xs mt-1">{edu.period}</p>
                   <p className="text-gray-600 dark:text-gray-300 text-xs mt-2 font-medium">{edu.detail}</p>
                 </div>
               ))}

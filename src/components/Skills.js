@@ -64,7 +64,7 @@ const skillGroups = [
       'PostgreSQL', 'MySQL', 'SQL Server', 'Oracle',
       'MongoDB', 'Elasticsearch', 'Redis',
       'Snowflake', 'Databricks',
-      'Tableau', 'PowerBI', 'matplotlib', 'seaborn', 'Plotly',
+      'Tableau', 'PowerBI', 'Looker Studio', 'matplotlib', 'seaborn', 'Plotly', 'Streamlit', 'Gradio',
     ],
   },
   {
