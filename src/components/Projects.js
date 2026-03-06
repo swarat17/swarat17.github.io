@@ -7,6 +7,18 @@ const filters = ['All', 'CV', 'NLP & LLMs', 'Data', 'Full-Stack']
 
 const projects = [
   {
+    title: 'Safety-Constrained Insulin Dosing RL Agent',
+    subtitle: 'Reinforcement Learning · Healthcare AI',
+    filter: 'NLP & LLMs',
+    description:
+      'Built a custom Gymnasium environment over an FDA-validated T1D simulator and benchmarked 5 RL agents (DQN, PPO, SAC + constrained variants) across 3 patient cohorts. Recovered a collapsed PPO policy from 47% → 73% time-in-range via Lagrangian safety constraints.',
+    metric: '76.5% safe-range adherence — matching clinician baseline · 5 agents benchmarked across 3 patient cohorts',
+    tech: ['PyTorch', 'Stable-Baselines3', 'Gymnasium', 'Simglucose', 'Streamlit', 'Hugging Face'],
+    github: 'https://github.com/swarat17/insulin-rl-agent',
+    accent: 'from-lime-500 to-green-600',
+    accentLight: 'bg-lime-50 text-lime-700 dark:bg-lime-950/50 dark:text-lime-300',
+  },
+  {
     title: 'RL-Guided Curriculum Learning Pipeline',
     subtitle: 'Deep Learning · NLP',
     filter: 'NLP & LLMs',
