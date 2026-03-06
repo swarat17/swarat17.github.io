@@ -15,8 +15,8 @@ const skillGroups = [
     pills: 'bg-purple-50 text-purple-800 border-purple-100 hover:bg-purple-100 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-900/50 dark:hover:bg-purple-950/60',
     skills: [
       'PyTorch', 'TensorFlow', 'Keras', 'scikit-learn', 'XGBoost', 'Hugging Face',
-      'Gymnasium', 'CNNs', 'RNNs', 'Transformers (BERT · ViT · LECSFormer)',
-      'VAEs', 'Diffusion Models', 'RL (PPO · DQN · A3C)',
+      'Gymnasium', 'Stable-Baselines3', 'CNNs', 'RNNs', 'Transformers (BERT · ViT · LECSFormer)',
+      'VAEs', 'Diffusion Models', 'RL (PPO · DQN · SAC · A3C)', 'Safe RL / Lagrangian Constraints',
       'Feature Engineering', 'Hyperparameter Tuning', 'A/B Testing',
     ],
   },
@@ -62,7 +62,7 @@ const skillGroups = [
     pills: 'bg-amber-50 text-amber-800 border-amber-100 hover:bg-amber-100 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-900/50 dark:hover:bg-amber-950/60',
     skills: [
       'PostgreSQL', 'MySQL', 'SQL Server', 'Oracle',
-      'MongoDB', 'Elasticsearch', 'Redis',
+      'MongoDB', 'Elasticsearch', 'Redis', 'Supabase',
       'Snowflake', 'Databricks',
       'Tableau', 'PowerBI', 'Looker Studio', 'matplotlib', 'seaborn', 'Plotly', 'Streamlit', 'Gradio',
     ],
@@ -73,7 +73,7 @@ const skillGroups = [
     color: 'bg-cyan-600',
     pills: 'bg-cyan-50 text-cyan-800 border-cyan-100 hover:bg-cyan-100 dark:bg-cyan-950/40 dark:text-cyan-300 dark:border-cyan-900/50 dark:hover:bg-cyan-950/60',
     skills: [
-      'AWS (SageMaker · S3 · EC2)', 'GCP', 'Azure',
+      'AWS (SageMaker · S3 · EC2 · Lambda)', 'GCP', 'Azure',
       'Docker', 'Kubernetes', 'MLflow', 'CI/CD', 'GitHub Actions',
       'FastAPI', 'Flask', 'RESTful APIs', 'Model Serving',
       'nginx', 'Linux', 'Git', 'Postman', 'VS Code',
