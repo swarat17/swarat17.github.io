@@ -3,13 +3,13 @@ import { useState } from 'react'
 import FadeIn from './FadeIn'
 import { Github, ExternalLink } from 'lucide-react'
 
-const filters = ['All', 'CV', 'NLP & LLMs', 'Data', 'Full-Stack']
+const filters = ['All', 'CV', 'NLP & LLMs', 'RL', 'Data', 'Full-Stack']
 
 const projects = [
   {
     title: 'Safety-Constrained Insulin Dosing RL Agent',
     subtitle: 'Reinforcement Learning · Healthcare AI',
-    filter: 'NLP & LLMs',
+    filter: 'RL',
     description:
       'Built a custom Gymnasium environment over an FDA-validated T1D simulator and benchmarked 5 RL agents (DQN, PPO, SAC + constrained variants) across 3 patient cohorts. Recovered a collapsed PPO policy from 47% → 73% time-in-range via Lagrangian safety constraints.',
     metric: '76.5% safe-range adherence — matching clinician baseline · 5 agents benchmarked across 3 patient cohorts',
@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'RL-Guided Curriculum Learning Pipeline',
     subtitle: 'Deep Learning · NLP',
-    filter: 'NLP & LLMs',
+    filter: 'RL',
     description:
       'Novel curriculum learning system using a PPO reinforcement learning agent to adaptively order training data for LLM-based text classification. Built a custom Gymnasium environment with BERT embedding analysis.',
     metric: '~60% faster convergence through online difficulty estimation and easy-to-hard ordering',
