@@ -58,8 +58,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm border-b border-gray-100 dark:border-gray-700'
-          : 'bg-white dark:bg-gray-900'
+          ? 'bg-white/90 dark:bg-navy-900/90 backdrop-blur-md border-b border-gray-200/60 dark:border-blue-500/10 shadow-sm dark:shadow-blue-900/10'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,28 +67,29 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors tracking-tight"
+            className="font-display font-bold text-lg tracking-tight text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
-            Swarat Sarkar
+            <span className="text-gradient-blue">Swarat</span>
+            <span className="text-gray-900 dark:text-slate-200"> Sarkar</span>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.slice(1)
               return (
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors relative group ${
+                  className={`font-mono text-[0.7rem] tracking-[0.12em] uppercase transition-colors relative group ${
                     isActive
                       ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                      : 'text-gray-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute -bottom-0.5 left-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${
+                    className={`absolute -bottom-0.5 left-0 h-px bg-blue-500 transition-all duration-300 ${
                       isActive ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}
                   />
@@ -99,10 +100,10 @@ export default function Navbar() {
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all"
+              className="p-1.5 text-gray-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10 rounded-md transition-all border border-transparent hover:border-blue-200 dark:hover:border-blue-500/20"
               aria-label="Toggle dark mode"
             >
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
             </button>
           </div>
 
@@ -110,17 +111,17 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleTheme}
-              className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-colors"
+              className="p-1.5 text-gray-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 rounded-md transition-colors"
               aria-label="Toggle dark mode"
             >
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
             </button>
             <button
-              className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="p-1.5 text-gray-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
-              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+              {menuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -128,7 +129,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300 ${
+        className={`md:hidden bg-white/95 dark:bg-navy-900/95 backdrop-blur-md border-t border-gray-100 dark:border-blue-500/10 overflow-hidden transition-all duration-300 ${
           menuOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -139,10 +140,10 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors px-3 py-2 rounded-lg ${
+                className={`font-mono text-[0.7rem] tracking-[0.12em] uppercase transition-colors px-3 py-2.5 rounded-md ${
                   isActive
-                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800'
+                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10'
+                    : 'text-gray-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10'
                 }`}
                 onClick={() => setMenuOpen(false)}
               >

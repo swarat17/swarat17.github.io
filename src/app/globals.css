@@ -4,31 +4,166 @@
 
 html {
   scroll-behavior: smooth;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
-  @apply bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100;
-  font-family: var(--font-inter), Inter, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: #060b18;
+  color: #e2e8f0;
+}
+
+/* Film grain overlay — luxury texture */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cdefs%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Gold top hairline */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a96e 30%, #c9a96e 70%, transparent);
+  opacity: 0.5;
+  z-index: 9999;
+  pointer-events: none;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
+  background: #040810;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  background: rgba(59, 130, 246, 0.35);
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400 dark:bg-gray-500;
+  background: #3b82f6;
 }
 
-/* Section padding utility */
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink::after {
+  content: '_';
+  animation: blink 1.1s step-end infinite;
+  margin-left: 1px;
+  font-weight: 700;
+}
+
 @layer utilities {
+  /* Dot grid background — retro-futuristic */
+  .dot-grid {
+    background-image: radial-gradient(
+      circle,
+      rgba(59, 130, 246, 0.13) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+
+  /* Gradient text utilities */
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 50%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #dfc18f 0%, #c9a96e 60%, #a07840 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Card glow on hover */
+  .card-glow {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease,
+      transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-glow:hover {
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3),
+      0 16px 48px rgba(59, 130, 246, 0.12);
+    transform: translateY(-2px);
+  }
+  /* Scanline flash on hover */
+  .card-glow::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(59, 130, 246, 0.04),
+      transparent
+    );
+    transition: top 0.5s ease;
+    pointer-events: none;
+  }
+  .card-glow:hover::after {
+    top: 120%;
+  }
+
+  /* Gold card glow variant */
+  .card-gold {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease,
+      transform 0.3s ease;
+  }
+  .card-gold:hover {
+    box-shadow: 0 0 0 1px rgba(201, 169, 110, 0.25),
+      0 12px 40px rgba(201, 169, 110, 0.07);
+    transform: translateY(-2px);
+  }
+
+  /* Thin gradient divider line */
+  .line-fade {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      #3b82f6,
+      rgba(59, 130, 246, 0.25),
+      transparent
+    );
+  }
+
+  .line-fade-gold {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      #c9a96e,
+      rgba(201, 169, 110, 0.2),
+      transparent
+    );
+  }
+
+  /* Section padding */
   .section-pad {
-    @apply py-20 px-4 sm:px-6 lg:px-8;
+    @apply py-24 px-4 sm:px-6 lg:px-8;
   }
 }
