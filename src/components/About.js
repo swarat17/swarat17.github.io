@@ -1,5 +1,6 @@
 import FadeIn from './FadeIn'
-import { GraduationCap, Briefcase, FileText, Award } from 'lucide-react'
+import SectionHeader from './SectionHeader'
+import { GraduationCap, Briefcase, FileText, Award, User } from 'lucide-react'
 
 const stats = [
   {
@@ -49,18 +50,7 @@ export default function About() {
     <section id="about" className="bg-white dark:bg-navy-800 py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Section header */}
-        <FadeIn>
-          <div className="mb-14">
-            <p className="font-mono text-[0.65rem] tracking-[0.25em] text-amber-600 dark:text-gold uppercase mb-4 cursor-blink">
-              // about_me
-            </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-slate-100 tracking-tight">
-              Who I Am
-            </h2>
-            <div className="mt-4 line-fade w-16" />
-          </div>
-        </FadeIn>
+        <SectionHeader number="01" label="// about_me" icon={User} title="Who I Am" />
 
         <div className="grid lg:grid-cols-2 gap-14 items-start">
           {/* Bio */}

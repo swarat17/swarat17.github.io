@@ -1,7 +1,8 @@
 'use client'
 import { useState } from 'react'
 import FadeIn from './FadeIn'
-import { Github, ExternalLink } from 'lucide-react'
+import SectionHeader from './SectionHeader'
+import { Github, ExternalLink, Layers } from 'lucide-react'
 
 const filters = ['All', 'CV', 'NLP & LLMs', 'RL', 'Data', 'Full-Stack']
 
@@ -133,18 +134,7 @@ export default function Projects() {
     <section id="projects" className="bg-slate-50 dark:bg-navy-900 py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Section header */}
-        <FadeIn>
-          <div className="mb-10">
-            <p className="font-mono text-[0.65rem] tracking-[0.25em] text-amber-600 dark:text-gold uppercase mb-4 cursor-blink">
-              // selected_work
-            </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-slate-100 tracking-tight">
-              What I&apos;ve Built
-            </h2>
-            <div className="mt-4 line-fade w-16" />
-          </div>
-        </FadeIn>
+        <SectionHeader number="02" label="// selected_work" icon={Layers} title="What I've Built" />
 
         {/* Filter buttons */}
         <FadeIn delay={60}>

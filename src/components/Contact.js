@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import FadeIn from './FadeIn'
+import SectionHeader from './SectionHeader'
 import { Mail, Linkedin, Github, ArrowRight, Copy, Check } from 'lucide-react'
 
 export default function Contact() {
@@ -23,16 +24,7 @@ export default function Contact() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="max-w-2xl mx-auto text-center">
-            {/* Label */}
-            <p className="font-mono text-[0.65rem] tracking-[0.25em] text-gold uppercase mb-5 cursor-blink">
-              // get_in_touch
-            </p>
-
-            {/* Headline */}
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-white tracking-tight mb-5 leading-tight">
-              Let&apos;s{' '}
-              <span className="text-gradient-blue">Connect.</span>
-            </h2>
+            <SectionHeader number="07" label="// get_in_touch" icon={Mail} title="Let's Connect." center onDark />
 
             {/* Subtext */}
             <p className="text-slate-400 leading-relaxed mb-12 text-sm max-w-lg mx-auto">
