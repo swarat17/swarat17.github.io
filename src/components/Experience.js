@@ -33,7 +33,7 @@ const experiences = [
     ],
   },
   {
-    role: 'Manager, IT Network and Communication',
+    role: 'Systems Software Engineer',
     org: 'Tata Steel Limited',
     sub: '',
     location: 'Jamshedpur, India',
@@ -49,7 +49,7 @@ const experiences = [
     ],
   },
   {
-    role: 'Management Trainee Systems',
+    role: 'Graduate Trainee Systems',
     org: 'Tata Steel Limited',
     sub: '',
     location: 'Remote',
