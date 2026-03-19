@@ -13,7 +13,7 @@ const experiences = [
     orgColor: 'text-blue-600 dark:text-blue-400',
     bullets: [
       'Architecting a Computer Vision pipeline in ROS2 with LECSFormer transformers on autonomous vehicles for bridge crack segmentation and length quantification, enabling real-time monitoring through vehicle-to-everything (V2X) technology.',
-      'Engineered training pipeline with density-aware augmentation and semi-automatic annotation to extract pixel-accurate crack masks from 443 dashcam images, achieving 89% F1 improvement and 247% precision gain via dynamic cropping.',
+      'Engineered crack detection training pipeline with custom augmentation strategies and semi-automatic annotation tool for 443 dashcam images, improving F1-score from 0.29 to 0.55 and precision from 0.20 to 0.70 via adaptive cropping.',
       'Co-authored conference paper "Infrastructure-Guided Connectivity-Enhanced Road Crack Detection and Estimation" accepted for publication at IEEE MOST 2026.',
     ],
   },
