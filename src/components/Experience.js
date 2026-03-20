@@ -124,6 +124,12 @@ const education = [
     detail: 'IIT JEE Advanced · 98th Percentile (1M+ students)',
     color: 'text-emerald-600 dark:text-emerald-400',
     border: 'border-emerald-200 dark:border-emerald-500/15 hover:border-emerald-400/40 dark:hover:border-emerald-500/30',
+    courses: [
+      { term: 'Mathematics', items: ['Calculus I & II', 'Vector Calculus', 'Linear Algebra', 'Differential Equations', 'Probability', 'Statistics', 'Transform Techniques'] },
+      { term: 'CS & Systems', items: ['Data Structures', 'Intro to Programming', 'Digital Logic Design', 'Control Systems', 'Modeling & Simulation', 'Operations Research'] },
+    ],
+    pillStyle: 'border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-500/10',
+    termColor: 'text-gray-400 dark:text-slate-500',
   },
 ]
 
@@ -245,7 +251,7 @@ export default function Experience() {
                           <p className="font-mono text-[0.55rem] tracking-widest text-gray-400 dark:text-slate-500 uppercase mb-1.5">{g.term}</p>
                           <div className="flex flex-wrap gap-1.5">
                             {g.items.map((c) => (
-                              <span key={c} className="font-mono text-[0.6rem] px-2 py-0.5 rounded border border-blue-200 dark:border-blue-500/20 text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-500/10">
+                              <span key={c} className={`font-mono text-[0.6rem] px-2 py-0.5 rounded border ${edu.pillStyle || 'border-blue-200 dark:border-blue-500/20 text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-500/10'}`}>
                                 {c}
                               </span>
                             ))}
