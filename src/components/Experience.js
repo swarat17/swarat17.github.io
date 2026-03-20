@@ -111,6 +111,11 @@ const education = [
     detail: 'GPA: 3.83 / 4.0',
     color: 'text-blue-600 dark:text-blue-400',
     border: 'border-blue-200 dark:border-blue-500/15 hover:border-blue-400/40 dark:hover:border-blue-500/30',
+    courses: [
+      { term: 'Fall \'24', items: ['Algorithms & Design', 'Machine Learning', 'Numerical Methods', 'Foundations of AI'] },
+      { term: 'Spring \'25', items: ['Reinforcement Learning', 'Pattern Recognition', 'Computer Vision', 'Data Intensive Computing'] },
+      { term: 'Fall \'25', items: ['Experiential Data Science', 'ML & Robotics Integration'] },
+    ],
   },
   {
     degree: 'B.Tech',
@@ -231,8 +236,24 @@ export default function Experience() {
                 >
                   <p className="font-display text-sm font-bold text-gray-900 dark:text-slate-100">{edu.degree}</p>
                   <p className={`font-semibold text-sm mt-1 ${edu.color}`}>{edu.school}</p>
-                  <p className="font-mono text-[0.6rem] tracking-wider text-gray-400 dark:text-slate-500 mt-1.5 uppercase">{edu.period}</p>
+                  <p className="font-mono text-[0.6rem] tracking-wider text-gray-400 dark:text-slate-400 mt-1.5 uppercase">{edu.period}</p>
                   <p className="text-xs text-gray-500 dark:text-slate-400 mt-2">{edu.detail}</p>
+                  {edu.courses && (
+                    <div className="mt-4 space-y-2.5">
+                      {edu.courses.map((g) => (
+                        <div key={g.term}>
+                          <p className="font-mono text-[0.55rem] tracking-widest text-gray-400 dark:text-slate-500 uppercase mb-1.5">{g.term}</p>
+                          <div className="flex flex-wrap gap-1.5">
+                            {g.items.map((c) => (
+                              <span key={c} className="font-mono text-[0.6rem] px-2 py-0.5 rounded border border-blue-200 dark:border-blue-500/20 text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-500/10">
+                                {c}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
