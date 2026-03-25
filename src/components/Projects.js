@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: 'RL-Guided Curriculum Learning Pipeline',
-    subtitle: 'Deep Learning · NLP',
+    subtitle: 'Adaptive Training Optimization · RL · NLP',
     filter: 'RL',
     description:
       'Novel curriculum learning system using a PPO reinforcement learning agent to adaptively order training data for LLM-based text classification. Built a custom Gymnasium environment with BERT embedding analysis.',
@@ -45,6 +45,19 @@ const projects = [
     accentBar: 'from-emerald-500 to-teal-600',
     tag: 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/30 dark:text-emerald-300 dark:border-emerald-500/20',
     metric_accent: 'text-emerald-600 dark:text-emerald-400',
+  },
+  {
+    title: 'StreamRank — Real-Time Recommendation System',
+    subtitle: 'MLOps · Streaming · RecSys',
+    filter: 'Data',
+    description:
+      'Production-grade two-stage recommendation pipeline processing live clickstream events via Kafka. Elasticsearch retrieves 100 candidates (~74ms) then XGBoost re-ranks them (~3ms). Hybrid 192-dim embeddings combine collaborative filtering with text features; cold-start handled via session/popularity fallback.',
+    metric: 'P50: 75ms · P95: 102ms · XGBoost AUC 0.944 · 500k interactions across 157k products',
+    tech: ['Kafka', 'PySpark', 'Elasticsearch', 'XGBoost', 'Redis', 'FastAPI', 'MLflow', 'Docker'],
+    github: 'https://github.com/swarat17/streamrank-recsys',
+    accentBar: 'from-cyan-500 to-teal-600',
+    tag: 'bg-cyan-50 text-cyan-700 border-cyan-200 dark:bg-cyan-950/30 dark:text-cyan-300 dark:border-cyan-500/20',
+    metric_accent: 'text-cyan-600 dark:text-cyan-400',
   },
   {
     title: 'Yelp Review Analytics Pipeline',
