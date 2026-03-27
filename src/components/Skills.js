@@ -92,7 +92,7 @@ const skillGroups = [
     pills: 'border-cyan-200 text-cyan-800 bg-cyan-50 dark:border-cyan-500/20 dark:text-cyan-300 dark:bg-cyan-950/50',
     skills: [
       'AWS (SageMaker · S3 · EC2 · Lambda)', 'GCP', 'Azure',
-      'Docker', 'Kubernetes', 'MLflow', 'CI/CD', 'GitHub Actions',
+      'Docker', 'Kubernetes', 'MLflow', 'Prometheus', 'Grafana', 'CI/CD', 'GitHub Actions',
       'FastAPI', 'Flask', 'RESTful APIs', 'Model Serving',
       'nginx', 'Linux', 'Git', 'Postman', 'VS Code',
     ],
