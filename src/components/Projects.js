@@ -112,6 +112,19 @@ const projects = [
     metric_accent: 'text-cyan-600 dark:text-cyan-400',
   },
   {
+    title: 'Market Regime Detection — PEFT Benchmark',
+    subtitle: 'LLM Fine-Tuning · Financial NLP · PEFT',
+    filter: 'NLP & LLMs',
+    description:
+      'Rigorous benchmark of 4 PEFT methods (QLoRA, LoRA, (IA)³, Prefix Tuning) on Llama-3.2-3B for financial regime classification. Introduces a custom Regime Confidence Score (RCS) that penalizes high-confidence wrong calls — Bull/Bear errors weighted 2× over adjacent misclassifications.',
+    metric: 'QLoRA 90.0% accuracy · F1 90.8% · RCS 0.957 · (IA)³ matches LoRA with 15× fewer params',
+    tech: ['Llama-3.2-3B', 'QLoRA', 'LoRA', '(IA)³', 'HuggingFace PEFT', 'bitsandbytes', 'W&B', 'Gradio'],
+    github: 'https://github.com/swarat17/market-regime-detection',
+    accentBar: 'from-fuchsia-500 to-pink-600',
+    tag: 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200 dark:bg-fuchsia-950/30 dark:text-fuchsia-300 dark:border-fuchsia-500/20',
+    metric_accent: 'text-fuchsia-600 dark:text-fuchsia-400',
+  },
+  {
     title: 'FBS Design Context AI',
     subtitle: 'NLP · Fine-tuning · LLM Research',
     filter: 'NLP & LLMs',
