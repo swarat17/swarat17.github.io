@@ -45,7 +45,7 @@ const experiences = [
     tech: ['YOLOv8', 'TensorRT', 'ONNX', 'Python', 'FastAPI'],
   },
   {
-    role: 'Systems Software Engineer',
+    role: 'Software Engineer',
     org: 'Tata Steel Limited',
     sub: '',
     location: 'Jamshedpur, India',
@@ -65,7 +65,7 @@ const experiences = [
     tech: ['Python', 'Pandas', 'Tableau', 'REST APIs', 'Power Apps', 'ServiceNow'],
   },
   {
-    role: 'Graduate Trainee Systems',
+    role: 'Graduate Trainee - Software',
     org: 'Tata Steel Limited',
     sub: '',
     location: 'Remote',
@@ -79,9 +79,9 @@ const experiences = [
     metricBg: 'bg-emerald-50/80 dark:bg-emerald-500/15 border-emerald-100 dark:border-emerald-500/25',
     metrics: [
       { value: '25k+', label: 'Users', sub: 'bus tracking app' },
-      { value: 'GCP + AWS', label: 'Cloud ML', sub: 'deployed' },
+      { value: '75k+', label: 'Connections', sub: 'BigQuery pipeline' },
     ],
-    tech: ['ReactJS', 'ExpressJS', 'Google Maps API', 'Python', 'R', 'TensorFlow', 'MongoDB'],
+    tech: ['ReactJS', 'ExpressJS', 'Google Maps API', 'Microsoft SQL', '.NET', 'JWT', 'BigQuery', 'GCP'],
   },
   {
     role: 'Technical Trainee Intern',
