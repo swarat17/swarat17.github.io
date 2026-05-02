@@ -15,7 +15,7 @@ const stats = [
   },
   {
     icon: Briefcase,
-    value: '2+',
+    value: '3+',
     unit: 'yrs',
     label: 'Industry Experience',
     sub: 'Tata Steel · ML Roles',
