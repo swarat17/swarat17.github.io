@@ -39,7 +39,7 @@ const experiences = [
     metricColor: 'text-violet-600 dark:text-violet-400',
     metricBg: 'bg-violet-50/80 dark:bg-violet-500/15 border-violet-100 dark:border-violet-500/25',
     metrics: [
-      { value: '>99.5%', label: 'Defect Detection', sub: 'accuracy' },
+      { value: '>99.8%', label: 'Defect Detection', sub: 'accuracy' },
       { value: '84ms', label: 'Inference', sub: 'real-time' },
       { value: '30M+', label: 'Daily Tickets', sub: 'processed' },
     ],

@@ -69,7 +69,7 @@ export default function About() {
                 defect detection for manufacturing, and large-scale data pipelines. Before
                 graduate school, I spent{' '}
                 <span className="font-semibold text-gray-900 dark:text-slate-200">
-                  2+ years at Tata Steel as a Manager in IT Network &amp; Communications
+                  2+ years at Tata Steel as a Software Engineer
                 </span>
                 , where I led a 10+ member team managing 16,000+ network assets and drove a{' '}
                 <span className="font-semibold text-gray-900 dark:text-slate-200">
