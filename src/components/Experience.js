@@ -20,7 +20,7 @@ const experiences = [
     metrics: [
       { value: '0.29→0.55', label: 'F1 Score', sub: 'crack detection' },
       { value: '0.20→0.70', label: 'Precision', sub: 'via adaptive crop' },
-      { value: 'IEEE MOST', label: '2026', sub: 'published · cs.CV' },
+      { value: 'IEEE MOST', label: '2026', sub: 'arXiv preprint' },
     ],
     tech: ['ROS2', 'LECSFormer', 'PyTorch', 'SLAM', 'Navigation2', 'OpenCV', 'CUDA'],
     paper: 'https://arxiv.org/abs/2604.24616',
