@@ -28,12 +28,28 @@ export default function Hero() {
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
 
-            {/* Status badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 mb-8 rounded-full border border-gold/30 dark:border-gold/20 bg-amber-50/70 dark:bg-gold/[0.04] backdrop-blur-sm">
-              <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-              <span className="font-mono text-[0.6rem] tracking-[0.22em] text-amber-700 dark:text-gold uppercase">
-                Open to Full-Time Opportunities
-              </span>
+            {/* Badges row */}
+            <div className="flex flex-wrap items-center gap-2.5 mb-8 justify-center lg:justify-start">
+              {/* Status badge */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold/30 dark:border-gold/20 bg-amber-50/70 dark:bg-gold/[0.04] backdrop-blur-sm">
+                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                <span className="font-mono text-[0.6rem] tracking-[0.22em] text-amber-700 dark:text-gold uppercase">
+                  Open to Full-Time Opportunities
+                </span>
+              </div>
+
+              {/* Paper badge */}
+              <a
+                href="https://arxiv.org/abs/2604.24616"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-300/40 dark:border-blue-500/20 bg-blue-50/70 dark:bg-blue-500/[0.06] backdrop-blur-sm hover:border-blue-400/60 dark:hover:border-blue-500/35 transition-colors"
+              >
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                <span className="font-mono text-[0.6rem] tracking-[0.18em] text-blue-700 dark:text-blue-400 uppercase">
+                  arXiv Preprint · IEEE MOST 2026
+                </span>
+              </a>
             </div>
 
             {/* Headline */}

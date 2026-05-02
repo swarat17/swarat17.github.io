@@ -1,6 +1,6 @@
 import FadeIn from './FadeIn'
 import SectionHeader from './SectionHeader'
-import { Briefcase, GraduationCap } from 'lucide-react'
+import { Briefcase, GraduationCap, FileText } from 'lucide-react'
 
 const experiences = [
   {
@@ -20,9 +20,10 @@ const experiences = [
     metrics: [
       { value: '0.29→0.55', label: 'F1 Score', sub: 'crack detection' },
       { value: '0.20→0.70', label: 'Precision', sub: 'via adaptive crop' },
-      { value: 'IEEE MOST', label: '2026', sub: 'accepted paper' },
+      { value: 'IEEE MOST', label: '2026', sub: 'published · cs.CV' },
     ],
     tech: ['ROS2', 'LECSFormer', 'PyTorch', 'SLAM', 'Navigation2', 'OpenCV', 'CUDA'],
+    paper: 'https://arxiv.org/abs/2604.24616',
   },
   {
     role: 'ML Engineer',
@@ -186,6 +187,19 @@ function ExperienceCard({ exp, full = false }) {
             </span>
           ))}
         </div>
+
+        {/* Paper link */}
+        {exp.paper && (
+          <a
+            href={exp.paper}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 flex items-center gap-1.5 font-mono text-[0.62rem] tracking-wide text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition-colors"
+          >
+            <FileText size={11} />
+            arXiv Preprint · IEEE MOST 2026
+          </a>
+        )}
       </div>
     </div>
   )
