@@ -1,27 +1,23 @@
-import Navbar from '@/components/Navbar'
+import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Projects from '@/components/Projects'
+import Work from '@/components/Work'
 import Experience from '@/components/Experience'
-import Skills from '@/components/Skills'
-import Extracurriculars from '@/components/Extracurriculars'
-import BeyondCode from '@/components/BeyondCode'
+import Toolkit from '@/components/Toolkit'
+import Beyond from '@/components/Beyond'
+import Activities from '@/components/Activities'
 import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Nav />
       <Hero />
-      <About />
-      <Projects />
+      <Work />
       <Experience />
-      <Skills />
-      <Extracurriculars />
-      <BeyondCode />
+      <Toolkit />
+      <Beyond />
+      <Activities />
       <Contact />
-      <Footer />
     </main>
   )
 }

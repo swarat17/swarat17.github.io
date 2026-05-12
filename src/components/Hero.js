@@ -1,148 +1,147 @@
-import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react'
-import ProfileImage from './ProfileImage'
+import { SWARAT } from '@/data/content'
+import HeroPhoto from './HeroPhoto'
+
+const heroMetrics = [
+  { k: 'Users',    v: '25k+',    d: 'Tata Steel app' },
+  { k: 'Latency',  v: '84ms',    d: 'CV inference' },
+  { k: 'Accuracy', v: '>99.8%',  d: 'Defect detection' },
+  { k: 'Outages',  v: '-40%',    d: '16k+ assets' },
+  { k: 'Recsys',   v: '102ms',   d: 'P95 · live' },
+  { k: 'Paper',    v: 'IEEE',    d: 'MOST 2026' },
+]
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center bg-slate-50 dark:bg-navy-900 pt-16 overflow-hidden"
-    >
-      {/* Dot grid */}
-      <div className="absolute inset-0 dot-grid opacity-50 dark:opacity-100" />
+    <section id="hero">
+      <div className="max-w-[1280px] mx-auto px-8 sm:px-16">
 
-      {/* Radial fade */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/70 to-blue-50/20 dark:from-navy-900/98 dark:via-navy-900/85 dark:to-blue-950/30" />
-
-      {/* Decorative ambient blobs */}
-      <div className="absolute top-1/4 right-1/3 w-[480px] h-[480px] bg-blue-400/4 dark:bg-blue-500/4 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/5 w-64 h-64 bg-indigo-400/4 dark:bg-indigo-500/4 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Version marker */}
-      <div className="absolute bottom-8 right-6 font-mono text-[0.55rem] tracking-[0.25em] text-gray-200 dark:text-slate-700 select-none" aria-hidden="true">
-        v2.0 · 2026
-      </div>
-
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
-
-          {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left">
-
-            {/* Badges row */}
-            <div className="flex flex-wrap items-center gap-2.5 mb-8 justify-center lg:justify-start">
-              {/* Status badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold/30 dark:border-gold/20 bg-amber-50/70 dark:bg-gold/[0.04] backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-                <span className="font-mono text-[0.6rem] tracking-[0.22em] text-amber-700 dark:text-gold uppercase">
-                  Open to Full-Time Opportunities
-                </span>
-              </div>
-
-              {/* Paper badge */}
-              <a
-                href="https://arxiv.org/abs/2604.24616"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-300/40 dark:border-blue-500/20 bg-blue-50/70 dark:bg-blue-500/[0.06] backdrop-blur-sm hover:border-blue-400/60 dark:hover:border-blue-500/35 transition-colors"
-              >
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-                <span className="font-mono text-[0.6rem] tracking-[0.18em] text-blue-700 dark:text-blue-400 uppercase">
-                  arXiv Preprint · IEEE MOST 2026
-                </span>
-              </a>
+        {/* Main hero grid */}
+        <div
+          className="grid pt-14 pb-16 border-b border-[rgba(10,10,10,0.10)]"
+          style={{ gridTemplateColumns: 'repeat(12, 1fr)', columnGap: '24px' }}
+        >
+          {/* Left — col 1–7 */}
+          <div className="col-span-12 lg:col-span-7">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-7 font-mono text-[11px] text-accent tracking-[0.22em] uppercase">
+              <span className="inline-block w-6 h-px bg-accent flex-shrink-0" />
+              AI / ML engineer · NYC · open to full-time
             </div>
 
-            {/* Headline */}
-            <h1 className="font-display font-bold tracking-tight leading-[1.02] mb-5">
-              <span className="block text-5xl sm:text-6xl lg:text-[4.5rem] text-gray-900 dark:text-slate-100">
-                AI/ML
-              </span>
-              <span className="block text-5xl sm:text-6xl lg:text-[4.5rem] text-gradient-blue">
-                Engineer.
-              </span>
+            {/* H1 */}
+            <h1 className="font-display font-bold tracking-[-0.04em] leading-[0.92] text-[3.5rem] sm:text-[5rem] lg:text-[6rem] mb-7">
+              I build <span className="text-accent">ML systems</span>,<br />
+              not just <span className="text-accent">notebooks</span>.
             </h1>
 
-            {/* Monospace identity line */}
-            <p className="font-mono text-[0.65rem] tracking-[0.25em] text-gray-500 dark:text-slate-400 uppercase mb-7">
-              Swarat Sarkar &nbsp;·&nbsp; New York City &nbsp;·&nbsp; MS AI @ UB
-            </p>
-
-            {/* Description */}
-            <p className="text-[0.95rem] text-gray-500 dark:text-slate-400 leading-relaxed max-w-lg mb-10 mx-auto lg:mx-0">
-              Computer Vision researcher and ML engineer with hands-on experience building
-              production AI systems — from bridge infrastructure monitoring to real-time defect
-              detection. Open to SWE, ML, and AI Engineering roles.
+            {/* Body */}
+            <p className="text-[17px] leading-[1.55] text-ink max-w-[540px] mb-7">
+              Real-time CV, reinforcement learning, and the unglamorous plumbing in between —
+              CUDA kernels to React forms, LangGraph pipelines to PySpark jobs.{' '}
+              <span className="text-mute">
+                MS in AI from Buffalo, B.Tech from IIT Hyderabad. Two-plus years shipping
+                production software at Tata Steel before grad school.
+              </span>
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10">
+            <div className="flex flex-wrap gap-4 items-center">
               <a
-                href="#projects"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/35 hover:-translate-y-0.5 text-sm"
+                href="#work"
+                className="font-mono text-[11px] tracking-[0.16em] uppercase bg-ink text-white px-[18px] py-3 hover:bg-accent transition-colors no-underline"
               >
-                View My Work <ArrowRight size={15} />
+                See work ↓
               </a>
               <a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-gray-200 dark:border-blue-500/20 hover:border-gold/40 dark:hover:border-gold/30 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-gold font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:-translate-y-0.5 bg-white/60 dark:bg-navy-700/50 backdrop-blur-sm text-sm"
+                className="font-mono text-[11px] tracking-[0.16em] uppercase border border-ink text-ink px-[18px] py-3 hover:bg-ink hover:text-white transition-colors no-underline"
               >
-                Download Resume <Download size={15} />
+                Download CV ↗
               </a>
-            </div>
-
-            {/* Social links */}
-            <div className="flex gap-6 justify-center lg:justify-start">
-              <a
-                href="https://github.com/swarat17"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-400 dark:text-slate-500 hover:text-gray-900 dark:hover:text-slate-200 transition-all duration-200 group"
-              >
-                <Github size={17} className="group-hover:scale-110 transition-transform" />
-                <span className="font-mono text-[0.62rem] tracking-wider">GitHub</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/swarat17"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 group"
-              >
-                <Linkedin size={17} className="group-hover:scale-110 transition-transform" />
-                <span className="font-mono text-[0.62rem] tracking-wider">LinkedIn</span>
-              </a>
-              <a
-                href="mailto:swaratsarkar@gmail.com"
-                className="flex items-center gap-2 text-gray-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 group"
-              >
-                <Mail size={17} className="group-hover:scale-110 transition-transform" />
-                <span className="font-mono text-[0.62rem] tracking-wider">Email</span>
-              </a>
+              <span className="font-mono text-[10px] text-mute tracking-[0.14em]">
+                {SWARAT.projects.length} projects · {SWARAT.experience.length} roles · 1 paper
+              </span>
             </div>
           </div>
 
-          {/* Profile Photo + decorative bracket geometry */}
-          <div className="flex-shrink-0 relative">
-            {/* Corner bracket — top left */}
-            <div className="absolute -top-5 -left-5 w-8 h-8 border-t border-l border-gold/30 dark:border-gold/25" />
-            {/* Corner bracket — bottom right */}
-            <div className="absolute -bottom-5 -right-5 w-8 h-8 border-b border-r border-gold/30 dark:border-gold/25" />
-            {/* Outer ring pulse */}
-            <div className="absolute inset-0 rounded-full border border-blue-400/10 dark:border-blue-500/10 scale-[1.18] animate-[glow_4s_ease-in-out_infinite]" />
-            <ProfileImage />
+          {/* Right — col 8–12 */}
+          <div className="col-span-12 lg:col-span-5 flex flex-col gap-4 mt-10 lg:mt-0">
+            {/* Profile photo + name */}
+            <div className="flex items-center gap-3">
+              <HeroPhoto />
+              <div>
+                <p className="font-display text-sm font-semibold">{SWARAT.name}</p>
+                <p className="font-mono text-[10px] text-accent tracking-widest uppercase mt-1">
+                  {SWARAT.title}
+                </p>
+              </div>
+            </div>
+
+            {/* "In production" card */}
+            <div className="bg-soft p-7 flex flex-col gap-5 flex-1">
+              <div className="flex justify-between items-baseline border-b border-[rgba(10,10,10,0.10)] pb-3.5">
+                <span className="font-mono text-[10px] text-accent tracking-[0.2em] uppercase">
+                  In production / 00
+                </span>
+                <span className="font-mono text-[10px] text-mute tracking-[0.16em]">
+                  2021 — present
+                </span>
+              </div>
+
+              <p className="font-display text-[20px] font-semibold leading-[1.3] tracking-[-0.01em]">
+                Things I&rsquo;ve actually shipped — to real users, on real hardware, with real latency budgets.
+              </p>
+
+              {/* 3×2 metric grid */}
+              <div className="grid grid-cols-3 gap-px bg-[rgba(10,10,10,0.10)] mt-1">
+                {heroMetrics.map((m) => (
+                  <div key={m.k} className="bg-soft p-4">
+                    <div className="font-mono text-[9.5px] text-mute tracking-[0.14em] uppercase">
+                      {m.k}
+                    </div>
+                    <div className="font-display text-2xl font-bold tracking-[-0.02em] text-ink mt-1 leading-[1.05]">
+                      {m.v}
+                    </div>
+                    <div className="font-mono text-[10px] text-accent mt-0.5">{m.d}</div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="font-mono text-[10px] text-mute tracking-[0.06em] mt-auto">
+                STACK&nbsp;&nbsp; PyTorch · ROS2 · Kafka · React · CUDA · TensorRT · LangGraph
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="flex justify-center mt-20">
-          <a
-            href="#about"
-            className="flex flex-col items-center gap-2 text-gray-300 dark:text-slate-700 hover:text-blue-500 dark:hover:text-blue-400 transition-colors group"
-          >
-            <span className="font-mono text-[0.55rem] tracking-[0.38em] uppercase">Scroll</span>
-            <div className="w-px h-10 bg-gradient-to-b from-gray-300 dark:from-slate-700 to-transparent group-hover:from-blue-400 transition-colors" />
-          </a>
+        {/* Stats strip */}
+        <div
+          className="grid py-8 border-b border-[rgba(10,10,10,0.10)]"
+          style={{ gridTemplateColumns: 'repeat(12, 1fr)', columnGap: '24px' }}
+        >
+          {SWARAT.stats.map((st, i) => (
+            <div
+              key={i}
+              className={`col-span-6 sm:col-span-3 ${
+                i > 0 ? 'sm:border-l sm:border-[rgba(10,10,10,0.10)] sm:pl-6' : ''
+              }`}
+            >
+              <div className="font-mono text-[10px] text-mute tracking-[0.18em] uppercase">
+                {String(i + 1).padStart(2, '0')} · {st.k}
+              </div>
+              <div className="flex items-baseline gap-1 mt-2">
+                <span className="font-display text-[44px] font-bold tracking-[-0.025em] leading-none">
+                  {st.v}
+                </span>
+                {st.u && (
+                  <span className="font-mono text-[11px] text-mute">{st.u}</span>
+                )}
+              </div>
+              <div className="font-mono text-[10px] text-mute mt-2 tracking-[0.04em]">{st.s}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,97 +1,80 @@
 'use client'
 import { useState } from 'react'
+import { SWARAT } from '@/data/content'
 import FadeIn from './FadeIn'
-import SectionHeader from './SectionHeader'
-import { Mail, Linkedin, Github, ArrowRight, Copy, Check } from 'lucide-react'
 
 export default function Contact() {
   const [copied, setCopied] = useState(false)
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('swaratsarkar@gmail.com')
+    navigator.clipboard.writeText(SWARAT.email)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
 
   return (
-    <section id="contact" className="bg-navy-950 dark:bg-navy-950 py-24 relative overflow-hidden">
-      {/* Dot grid */}
-      <div className="absolute inset-0 dot-grid opacity-40" />
-
-      {/* Ambient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FadeIn>
-          <div className="max-w-2xl mx-auto text-center">
-            <SectionHeader number="07" label="// get_in_touch" icon={Mail} title="Let's Connect." center onDark />
-
-            {/* Subtext */}
-            <p className="text-slate-400 leading-relaxed mb-12 text-sm max-w-lg mx-auto">
-              I&apos;m actively looking for full-time opportunities in ML Engineering, AI Engineering,
-              Software Engineering, and Robotics. Feel free to reach out!
+    <section id="contact" className="max-w-[1280px] mx-auto px-8 sm:px-16 pt-14 border-t-2 border-ink pb-16">
+      <FadeIn>
+        <div
+          className="grid"
+          style={{ gridTemplateColumns: 'repeat(12, 1fr)', columnGap: '24px' }}
+        >
+          {/* Left — col 1–7 */}
+          <div className="col-span-12 lg:col-span-7">
+            <div className="font-mono text-[11px] text-accent tracking-[0.22em] uppercase mb-4">
+              06 · Get in touch
+            </div>
+            <h2 className="font-display font-bold tracking-[-0.04em] leading-[0.95] text-[3rem] sm:text-[4rem] lg:text-[5rem]">
+              Currently<br />looking for<br />
+              <span className="text-accent">full-time SWE.</span>
+            </h2>
+            <p className="text-[14px] text-ink mt-5 max-w-[480px]">
+              ML / AI / Robotics also welcome. NYC-based, fine with remote and hybrid.
             </p>
-
-            {/* Contact buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-14">
-              {/* Email button */}
-              <div className="inline-flex rounded-lg overflow-hidden border border-blue-500/30 shadow-lg shadow-blue-500/10">
-                <button
-                  onClick={copyEmail}
-                  className="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-3 transition-all duration-200 text-sm"
-                >
-                  <Mail size={16} />
-                  swaratsarkar@gmail.com
-                  {copied ? (
-                    <Check size={14} className="text-green-300" />
-                  ) : (
-                    <Copy size={13} className="opacity-60" />
-                  )}
-                </button>
-                <a
-                  href="mailto:swaratsarkar@gmail.com"
-                  className="flex items-center px-3 bg-blue-700 hover:bg-blue-600 text-white border-l border-blue-500/40 transition-colors"
-                  title="Open in mail client"
-                >
-                  <ArrowRight size={14} />
-                </a>
-              </div>
-
-              <a
-                href="https://www.linkedin.com/in/swarat17"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 bg-white/5 hover:bg-white/10 text-slate-200 font-semibold px-6 py-3 rounded-lg border border-white/10 hover:border-blue-400/30 transition-all duration-200 text-sm"
-              >
-                <Linkedin size={16} />
-                LinkedIn
-                <ArrowRight size={13} className="opacity-50" />
-              </a>
-
-              <a
-                href="https://github.com/swarat17"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 bg-white/5 hover:bg-white/10 text-slate-200 font-semibold px-6 py-3 rounded-lg border border-white/10 hover:border-blue-400/30 transition-all duration-200 text-sm"
-              >
-                <Github size={16} />
-                GitHub
-                <ArrowRight size={13} className="opacity-50" />
-              </a>
-            </div>
-
-            {/* Footer info */}
-            <div className="border-t border-white/8 pt-8">
-              <p className="font-mono text-[0.65rem] tracking-[0.18em] text-slate-500 uppercase">
-                Based in{' '}
-                <span className="text-gold">New York City</span>
-                {' · '}
-                Open to remote and hybrid roles
-              </p>
-            </div>
           </div>
-        </FadeIn>
-      </div>
+
+          {/* Right — col 8–12 */}
+          <div className="col-span-12 lg:col-span-5 flex flex-col justify-end gap-[18px] mt-10 lg:mt-0">
+            <div className="bg-soft p-5 font-mono text-[12px] leading-[2] tracking-[0.04em]">
+              <div className="flex justify-between">
+                <span className="text-mute">EMAIL</span>
+                <span>{SWARAT.email}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-mute">GH</span>
+                <span>{SWARAT.github}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-mute">IN</span>
+                <span>{SWARAT.linkedin}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-mute">LOC</span>
+                <span>{SWARAT.location}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-mute">STATUS</span>
+                <span className="text-green-600">● Available</span>
+              </div>
+            </div>
+
+            <button
+              onClick={copyEmail}
+              className="bg-ink text-white p-4 font-mono text-[12px] tracking-[0.16em] uppercase flex justify-between items-center hover:bg-accent transition-colors w-full"
+            >
+              <span>{copied ? 'Copied ✓' : 'Send a note'}</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          {/* Footer row */}
+          <div className="col-span-12 flex justify-between mt-16 font-mono text-[10px] text-mute tracking-[0.18em] uppercase">
+            <span>© 2026 {SWARAT.name}</span>
+            <span>v3.0 · Grid</span>
+            <span>12-col · 24px gutter</span>
+          </div>
+        </div>
+      </FadeIn>
     </section>
   )
 }

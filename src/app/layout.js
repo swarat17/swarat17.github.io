@@ -1,24 +1,24 @@
-import { Syne, Space_Mono, DM_Sans } from 'next/font/google'
+import { Inter_Tight, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const syne = Syne({
+const interTight = Inter_Tight({
   subsets: ['latin'],
-  variable: '--font-syne',
-  weight: ['400', '600', '700', '800'],
+  variable: '--font-inter-tight',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
-const spaceMono = Space_Mono({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-space-mono',
-  weight: ['400', '700'],
+  variable: '--font-inter',
+  weight: ['400', '500', '600'],
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
-  weight: ['300', '400', '500', '600'],
+  variable: '--font-jetbrains',
+  weight: ['400', '500'],
   display: 'swap',
 })
 
@@ -40,16 +40,8 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${spaceMono.variable} ${dmSans.variable}`}
-      suppressHydrationWarning
+      className={`${interTight.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}`,
-          }}
-        />
-      </head>
       <body>{children}</body>
     </html>
   )
