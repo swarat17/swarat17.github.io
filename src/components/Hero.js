@@ -7,7 +7,7 @@ const heroMetrics = [
   { k: 'Accuracy', v: '>99.8%',  d: 'Defect detection' },
   { k: 'Outages',  v: '-40%',    d: '16k+ assets' },
   { k: 'Recsys',   v: '102ms',   d: 'P95 · live' },
-  { k: 'Paper',    v: 'IEEE',    d: 'MOST 2026' },
+  { k: 'F1 Score', v: '0.55',    d: 'Bridge detection' },
 ]
 
 export default function Hero() {
