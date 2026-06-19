@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { label: 'Contact',    href: '#contact' },
 ]
 
-const PAPER_URL = 'https://arxiv.org/abs/2604.24616'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -42,14 +41,6 @@ export default function Nav() {
                 {label}
               </a>
             ))}
-            <a
-              href={PAPER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-[11px] tracking-[0.14em] uppercase text-accent hover:text-ink transition-colors no-underline"
-            >
-              Paper ↗
-            </a>
           </div>
 
           {/* Status — col 11-12, desktop only */}

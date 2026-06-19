@@ -60,6 +60,14 @@ export default function Hero() {
               >
                 Download CV ↗
               </a>
+              <a
+                href={SWARAT.paper.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[11px] tracking-[0.16em] uppercase border border-ink text-ink px-[18px] py-3 hover:bg-ink hover:text-white transition-colors no-underline"
+              >
+                Read Paper ↗
+              </a>
               <span className="font-mono text-[10px] text-mute tracking-[0.14em]">
                 {SWARAT.projects.length} projects · {SWARAT.experience.length} roles · 1 paper
               </span>
@@ -121,27 +129,38 @@ export default function Hero() {
           className="grid py-8 border-b border-[rgba(10,10,10,0.10)]"
           style={{ gridTemplateColumns: 'repeat(12, 1fr)', columnGap: '24px' }}
         >
-          {SWARAT.stats.map((st, i) => (
-            <div
-              key={i}
-              className={`col-span-6 sm:col-span-3 ${
-                i > 0 ? 'sm:border-l sm:border-[rgba(10,10,10,0.10)] sm:pl-6' : ''
-              }`}
-            >
-              <div className="font-mono text-[10px] text-mute tracking-[0.18em] uppercase">
-                {String(i + 1).padStart(2, '0')} · {st.k}
-              </div>
-              <div className="flex items-baseline gap-1 mt-2">
-                <span className="font-display text-[44px] font-bold tracking-[-0.025em] leading-none">
-                  {st.v}
-                </span>
-                {st.u && (
-                  <span className="font-mono text-[11px] text-mute">{st.u}</span>
-                )}
-              </div>
-              <div className="font-mono text-[10px] text-mute mt-2 tracking-[0.04em]">{st.s}</div>
-            </div>
-          ))}
+          {SWARAT.stats.map((st, i) => {
+            const cls = `col-span-6 sm:col-span-3 ${i > 0 ? 'sm:border-l sm:border-[rgba(10,10,10,0.10)] sm:pl-6' : ''}`
+            const inner = (
+              <>
+                <div className="font-mono text-[10px] text-mute tracking-[0.18em] uppercase">
+                  {String(i + 1).padStart(2, '0')} · {st.k}
+                </div>
+                <div className="flex items-baseline gap-1 mt-2">
+                  <span className="font-display text-[44px] font-bold tracking-[-0.025em] leading-none">
+                    {st.v}
+                  </span>
+                  {st.u && (
+                    <span className="font-mono text-[11px] text-mute">{st.u}</span>
+                  )}
+                </div>
+                <div className="font-mono text-[10px] text-mute mt-2 tracking-[0.04em]">{st.s}</div>
+              </>
+            )
+            return st.url ? (
+              <a
+                key={i}
+                href={st.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${cls} no-underline hover:opacity-60 transition-opacity`}
+              >
+                {inner}
+              </a>
+            ) : (
+              <div key={i} className={cls}>{inner}</div>
+            )
+          })}
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ export const SWARAT = {
   email: 'swaratsarkar@gmail.com',
   github: 'github.com/swarat17',
   linkedin: 'linkedin.com/in/swarat17',
-  paper: { url: 'https://arxiv.org/abs/2604.24616', venue: 'IEEE MOST 2026' },
+  paper: { url: 'https://ieeexplore.ieee.org/abstract/document/11527466', venue: 'IEEE MOST 2026' },
   bio: [
     'AI Engineer and Researcher with an MS in Artificial Intelligence from the University at Buffalo (3.83 GPA) and a B.Tech from IIT Hyderabad. I specialize in computer vision, deep learning, and shipping production ML systems.',
     'My work spans V2X perception for infrastructure monitoring, real-time defect detection for manufacturing, and large-scale data pipelines. Before grad school I spent 2+ years at Tata Steel as a Software Engineer, leading a 10+ person team across 16,000+ network assets and driving a 40% reduction in outages.',
@@ -14,7 +14,7 @@ export const SWARAT = {
   stats: [
     { v: '3.83', u: '/4.0', k: 'MS AI · GPA',  s: 'University at Buffalo' },
     { v: '3+',   u: 'yrs',  k: 'Industry',     s: 'Tata Steel · ML roles' },
-    { v: 'IEEE', u: '',     k: 'MOST 2026',    s: 'Co-authored paper' },
+    { v: 'IEEE', u: '',     k: 'MOST 2026',    s: 'Co-authored paper', url: 'https://ieeexplore.ieee.org/abstract/document/11527466' },
     { v: '98th', u: 'pct',  k: 'IIT JEE',      s: 'Top 2% of 1M+' },
   ],
   experience: [
